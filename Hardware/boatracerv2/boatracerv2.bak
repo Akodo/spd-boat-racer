@@ -1,0 +1,337 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 A?
+U 1 1 5C4635C7
+P 3200 3800
+F 0 "A?" V 3650 2750 50  0000 R CNN
+F 1 "Arduino_UNO_R3" V 3750 2850 50  0000 R CNN
+F 2 "Module:Arduino_UNO_R3" H 3350 2750 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3000 4850 50  0001 C CNN
+	1    3200 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5C463E54
+P 5650 3350
+F 0 "J2" H 5623 3280 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 5623 3371 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5650 3350 50  0001 C CNN
+F 3 "~" H 5650 3350 50  0001 C CNN
+	1    5650 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5C463F03
+P 5750 4150
+F 0 "J3" H 5830 4142 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5830 4051 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5750 4150 50  0001 C CNN
+F 3 "~" H 5750 4150 50  0001 C CNN
+	1    5750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x14 J1
+U 1 1 5C4645FF
+P 3000 5550
+F 0 "J1" V 3124 5496 50  0000 C CNN
+F 1 "Screw_Terminal_01x14" V 3215 5496 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical" H 3000 5550 50  0001 C CNN
+F 3 "~" H 3000 5550 50  0001 C CNN
+	1    3000 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 5C46484E
+P 2300 4850
+F 0 "RV1" H 2230 4804 50  0000 R CNN
+F 1 "500K" H 2230 4895 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical" H 2300 4850 50  0001 C CNN
+F 3 "~" H 2300 4850 50  0001 C CNN
+	1    2300 4850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 5050 3650 5100
+Wire Wire Line
+	3650 5250 3500 5250
+Wire Wire Line
+	3500 5250 3500 5350
+Wire Wire Line
+	2400 5350 2400 5100
+Wire Wire Line
+	2400 5100 2300 5100
+Wire Wire Line
+	2300 5100 2300 5000
+Wire Wire Line
+	3650 5100 4800 5100
+Wire Wire Line
+	4800 5100 4800 3000
+Wire Wire Line
+	4800 3000 3300 3000
+Wire Wire Line
+	3300 3000 3300 3300
+Connection ~ 3650 5100
+Wire Wire Line
+	3650 5100 3650 5250
+Wire Wire Line
+	2300 5100 1950 5100
+Wire Wire Line
+	1950 5100 1950 3000
+Wire Wire Line
+	1950 3000 3200 3000
+Wire Wire Line
+	3200 3000 3200 3300
+Connection ~ 2300 5100
+Wire Wire Line
+	5100 3250 5100 4400
+Wire Wire Line
+	5100 4400 3800 4400
+Wire Wire Line
+	3800 4400 3800 4300
+Wire Wire Line
+	5100 3250 5450 3250
+Wire Wire Line
+	2600 5350 2600 4550
+Wire Wire Line
+	2600 4550 2800 4550
+Wire Wire Line
+	2800 4550 2800 4300
+Wire Wire Line
+	2700 5350 2700 4600
+Wire Wire Line
+	2700 4600 2900 4600
+Wire Wire Line
+	2900 4600 2900 4300
+Wire Wire Line
+	2900 5350 2900 4650
+Wire Wire Line
+	2900 4650 3000 4650
+Wire Wire Line
+	3000 4650 3000 4300
+Wire Wire Line
+	3000 5350 3000 4700
+Wire Wire Line
+	3000 4700 3100 4700
+Wire Wire Line
+	3100 4700 3100 4300
+Wire Wire Line
+	3100 4750 3200 4750
+Wire Wire Line
+	3200 4750 3200 4300
+Wire Wire Line
+	3100 4750 3100 5350
+Wire Wire Line
+	3200 4800 3300 4800
+Wire Wire Line
+	3300 4800 3300 4300
+Wire Wire Line
+	3300 5350 3300 4850
+Wire Wire Line
+	3300 4850 3400 4850
+Wire Wire Line
+	3400 4300 3400 4850
+Wire Wire Line
+	3700 4300 3700 4500
+Wire Wire Line
+	3700 4500 5550 4500
+Wire Wire Line
+	5550 4250 5550 4500
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5C46BAEC
+P 5850 4850
+F 0 "SW1" H 5850 5135 50  0000 C CNN
+F 1 "SW_Push" H 5850 5044 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 5850 5050 50  0001 C CNN
+F 3 "" H 5850 5050 50  0001 C CNN
+	1    5850 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4300 3600 4650
+Wire Wire Line
+	3600 4650 5650 4650
+Wire Wire Line
+	5650 4650 5650 4850
+$Comp
+L power:+5V #PWR?
+U 1 1 5C46C42F
+P 2200 3600
+F 0 "#PWR?" H 2200 3450 50  0001 C CNN
+F 1 "+5V" H 2215 3773 50  0000 C CNN
+F 2 "" H 2200 3600 50  0001 C CNN
+F 3 "" H 2200 3600 50  0001 C CNN
+	1    2200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C46C466
+P 5450 3450
+F 0 "#PWR?" H 5450 3300 50  0001 C CNN
+F 1 "+5V" H 5465 3623 50  0000 C CNN
+F 2 "" H 5450 3450 50  0001 C CNN
+F 3 "" H 5450 3450 50  0001 C CNN
+	1    5450 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C46C4B2
+P 2300 5350
+F 0 "#PWR?" H 2300 5200 50  0001 C CNN
+F 1 "+5V" H 2315 5523 50  0000 C CNN
+F 2 "" H 2300 5350 50  0001 C CNN
+F 3 "" H 2300 5350 50  0001 C CNN
+	1    2300 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C46E868
+P 3600 5350
+F 0 "#PWR?" H 3600 5200 50  0001 C CNN
+F 1 "+5V" V 3615 5478 50  0000 L CNN
+F 2 "" H 3600 5350 50  0001 C CNN
+F 3 "" H 3600 5350 50  0001 C CNN
+	1    3600 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C46E8DA
+P 4450 3800
+F 0 "#PWR?" H 4450 3550 50  0001 C CNN
+F 1 "GND" V 4455 3672 50  0000 R CNN
+F 2 "" H 4450 3800 50  0001 C CNN
+F 3 "" H 4450 3800 50  0001 C CNN
+	1    4450 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C46E91F
+P 3500 4900
+F 0 "#PWR?" H 3500 4650 50  0001 C CNN
+F 1 "GND" H 3505 4727 50  0000 C CNN
+F 2 "" H 3500 4900 50  0001 C CNN
+F 3 "" H 3500 4900 50  0001 C CNN
+	1    3500 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C46E96E
+P 2150 4850
+F 0 "#PWR?" H 2150 4600 50  0001 C CNN
+F 1 "GND" H 2155 4677 50  0000 C CNN
+F 2 "" H 2150 4850 50  0001 C CNN
+F 3 "" H 2150 4850 50  0001 C CNN
+	1    2150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C46E99E
+P 5550 4150
+F 0 "#PWR?" H 5550 3900 50  0001 C CNN
+F 1 "GND" V 5555 4022 50  0000 R CNN
+F 2 "" H 5550 4150 50  0001 C CNN
+F 3 "" H 5550 4150 50  0001 C CNN
+	1    5550 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C46E9F1
+P 6050 4850
+F 0 "#PWR?" H 6050 4600 50  0001 C CNN
+F 1 "GND" V 6055 4722 50  0000 R CNN
+F 2 "" H 6050 4850 50  0001 C CNN
+F 3 "" H 6050 4850 50  0001 C CNN
+	1    6050 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C46EA36
+P 5450 3350
+F 0 "#PWR?" H 5450 3100 50  0001 C CNN
+F 1 "GND" V 5455 3222 50  0000 R CNN
+F 2 "" H 5450 3350 50  0001 C CNN
+F 3 "" H 5450 3350 50  0001 C CNN
+	1    5450 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 3700 4300 3800
+Wire Wire Line
+	4300 3800 4300 3900
+Connection ~ 4300 3800
+Wire Wire Line
+	4300 3800 4450 3800
+Wire Wire Line
+	3200 4800 3200 5350
+$Comp
+L power:GND #PWR?
+U 1 1 5C4711FB
+P 3400 5350
+F 0 "#PWR?" H 3400 5100 50  0001 C CNN
+F 1 "GND" H 3405 5177 50  0000 C CNN
+F 2 "" H 3400 5350 50  0001 C CNN
+F 3 "" H 3400 5350 50  0001 C CNN
+	1    3400 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C473994
+P 2800 5350
+F 0 "#PWR?" H 2800 5100 50  0001 C CNN
+F 1 "GND" H 2805 5177 50  0000 C CNN
+F 2 "" H 2800 5350 50  0001 C CNN
+F 3 "" H 2800 5350 50  0001 C CNN
+	1    2800 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4739AD
+P 2500 5350
+F 0 "#PWR?" H 2500 5100 50  0001 C CNN
+F 1 "GND" H 2505 5177 50  0000 C CNN
+F 2 "" H 2500 5350 50  0001 C CNN
+F 3 "" H 2500 5350 50  0001 C CNN
+	1    2500 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV2
+U 1 1 5C473B55
+P 3650 4900
+F 0 "RV2" H 3580 4854 50  0000 R CNN
+F 1 "500K" H 3580 4945 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical" H 3650 4900 50  0001 C CNN
+F 3 "~" H 3650 4900 50  0001 C CNN
+	1    3650 4900
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
