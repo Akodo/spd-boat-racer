@@ -43,7 +43,7 @@ int Flag2 = 0;
 
 unsigned int Thresh = 500;
 unsigned int SlamDelay = 500;
-unsigned int tonefreq = 2900;
+unsigned int tonefreq = 3300;
 
 SoftwareSerial LCD(LCDRx, LCDTx);
 
@@ -274,27 +274,51 @@ void P2Race()
 	int val1 = analogRead(A0);
 	int val2 = analogRead(A1);
 	
-	if ((val1 > Thresh) || (val2 > Thresh)) {
+	if ((val1 > Thresh) && (val2 > Thresh)) {
 		Flag1 = 1;
 		Flag2 = 1;
 		LCD.write(254);
 		LCD.write(1);
-		LCD.write("   False Start  ");	
+		LCD.write(" 2x False Start ");	
 		
 		P1End = P1Start;
 		P2End = P2Start;
 		
 		delay(3000);
 	}
+	else if (val1 > Thresh) {
+		Flag1 = 1;
+		Flag2 = 1;
+		LCD.write(254);
+		LCD.write(1);
+		LCD.write("False Start     ");
+		
+		P1End = P1Start+9999;
+		P2End = P2Start;
+		
+		delay(3000);
+	}
+	else if (val2 > Thresh) {
+		Flag1 = 1;
+		Flag2 = 1;
+		LCD.write(254);
+		LCD.write(1);
+		LCD.write("     False Start");
+		
+		P1End = P1Start;
+		P2End = P2Start+9999;
+		
+		delay(3000);
+	}
 	else {
-			P1Start = millis();
-			P2Start = P1Start;
-			tone(Buzz, tonefreq);
-			BuzzTime = millis();
-			
-			LCD.write(254);
-			LCD.write(1);
-			LCD.write("     Racing     ");
+		P1Start = millis();
+		P2Start = P1Start;
+		tone(Buzz, tonefreq);
+		BuzzTime = millis();
+		
+		LCD.write(254);
+		LCD.write(1);
+		LCD.write("     Racing     ");
 	}
 	
 	while((Flag1 == 0) || (Flag2 == 0)) {
